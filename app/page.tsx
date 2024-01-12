@@ -1,0 +1,21 @@
+'use client'
+import { DataManager, ODataAdaptor } from '@syncfusion/ej2-data';
+import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-react-kanban";
+function App(this: any) {
+    let data = new DataManager({
+        url: 'https://ej2services.syncfusion.com/production/web-services/api/Kanban',
+        adaptor: new ODataAdaptor
+    });
+    function DialogOpen(args: { cancel: boolean; }) {
+        args.cancel = true;
+    }
+    return (<KanbanComponent id="kanban" keyField="Status" dataSource={data} cardSettings={{ contentField: "Summary", headerField: "Id" }} allowDragAndDrop={false} dialogOpen={DialogOpen.bind(this)}>
+        <ColumnsDirective>
+              <ColumnDirective headerText="To Do" keyField="Open"/>
+              <ColumnDirective headerText="In Progress" keyField="InProgress"/>
+              <ColumnDirective headerText="Testing" keyField="Testing"/>
+              <ColumnDirective headerText="Done" keyField="Close"/>
+            </ColumnsDirective>
+        </KanbanComponent>);
+}
+export default App;
