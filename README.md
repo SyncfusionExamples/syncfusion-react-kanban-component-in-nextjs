@@ -1,6 +1,6 @@
 # Getting Started with React UI Components using Next.js
  
-This application demonstrates the usage of the Syncfusion React kanban component in Next.js.
+This application demonstrates the usage of the Syncfusion React kanban component in Next.js. It provides a comprehensive example for integrating interactive kanban boards into Next.js applications, showcasing features like drag-and-drop tasks, swimlanes, and responsive design. Developers can easily customize board layouts and handle data flow for efficient project management workflows.
  
 To know how to configure the Syncfusion React kanban component in Next.js, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/kanban/nextjs-getting-started).
  
